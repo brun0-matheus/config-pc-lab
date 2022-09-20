@@ -12,4 +12,4 @@ wsl --install -d Ubuntu
 
 set /P fds=Aperte enter quando o wsl terminar a instalacao
 
-wsl -e bash -c "sudo apt-get update && sudo apt-get install build-essential gdb -y"
+wsl -e bash -c "sudo sed -i -e 's/archive.ubuntu.com/sft.if.usp.br/' /etc/apt/sources.list && sudo apt-get update && sudo apt-get install build-essential -y"
